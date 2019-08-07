@@ -3,8 +3,8 @@
 - name: Create TF repositories
   include_role:
     name: create_project
-    vars:
-      project: "{{ item }}"
+  vars:
+    project: "{{ item }}"
   loop:
     - Juniper/contrail-analytics
     - Juniper/contrail-ansible-deployer
