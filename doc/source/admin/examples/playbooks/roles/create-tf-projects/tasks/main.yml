@@ -1,0 +1,12 @@
+---
+# tasks file for create-tf-projects
+- name: Create TF repositories
+  include_role:
+    name: create_project
+    vars:
+      project: "{{ item }}"
+  loop:
+    - Juniper/contrail-analytics
+    - Juniper/contrail-ansible-deployer
+    - Juniper/contrail-api-client
+    - Juniper/contrail-build
