@@ -18,7 +18,8 @@ wait_for_gerrit() {
     echo "Wait for zuul user to be created"
     for i in $(seq 1 120); do
         [ $(curl -s -o /dev/null -w "%{http_code}" http://admin:secret@gerrit:8080/a/accounts/zuul/sshkeys) = "200" ] && return
-        sleep 1
+        sleep 10
+#Sleep 10, Creation of all TF project in gerrit takes longer time
     done
 
     echo "Timeout waiting for gerrit"
