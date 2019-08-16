@@ -1,14 +1,176 @@
 - tenant:
-    name: example-tenant
+    name: opencontrail
+    max-job-timeout: -1
     source:
+      github:
+        untrusted-projects:
+          - Juniper/zuul-jobs:
+              shadow: Juniper/contrail-project-config
+          - Juniper/contrail-publisher
+          - Juniper/zuul:
+              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+          - tungsten-infra/ci-utils
+          - tungsten-infra/containerregistry
       gerrit:
         config-projects:
-          - zuul-config
+          - Juniper/contrail-project-config
         untrusted-projects:
-          - test1
-          - test2
-      opendev.org:
-        untrusted-projects:
-          - zuul/zuul-jobs:
-              include:
-                - job
+          - Juniper/contrail
+          - Juniper/contrail-zuul-jobs:
+              shadow: Juniper/contrail-project-config
+          - Juniper/contrail-analytics
+          - Juniper/contrail-ansible
+          - Juniper/contrail-ansible-deployer
+          - Juniper/contrail-ansible-internal
+          - Juniper/contrail-api-client
+          - Juniper/contrail-build
+          - Juniper/contrail-common
+          - Juniper/contrail-community-docs
+          - Juniper/contrail-container-builder
+          - Juniper/contrail-controller
+          - Juniper/contrail-deployers-containers
+          - Juniper/contrail-dev-env
+          - Juniper/contrail-docker
+          - Juniper/contrail-docs
+          - Juniper/contrail-dpdk
+          - Juniper/contrail-fabric-utils
+          - Juniper/contrail-generateDS
+          - Juniper/contrail-go-api
+          - Juniper/contrail-heat
+          - Juniper/contrail-helm-deployer
+          - Juniper/contrail-horizon
+          - Juniper/contrail-infra
+          - Juniper/contrail-infra-doc
+          - Juniper/contrail-java-api
+          - Juniper/contrail-kolla-ansible:
+              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+          - Juniper/contrail-neutron-plugin
+          - Juniper/contrail-nova-vif-driver
+          - Juniper/contrail-packages
+          - Juniper/contrail-packaging
+          - Juniper/contrail-provisioning
+          - Juniper/contrail-puppet
+          - Juniper/contrail-sandesh
+          - Juniper/contrail-server-manager
+          - Juniper/contrail-specs
+          - Juniper/contrail-test
+          - Juniper/contrail-test-ci
+          - Juniper/contrail-third-party
+          - Juniper/contrail-third-party-cache
+          - Juniper/contrail-third-party-packages
+          - Juniper/contrail-tripleo-heat-templates
+          - Juniper/contrail-tripleo-puppet
+          - Juniper/contrail-vro-plugin
+          - Juniper/contrail-vrouter
+          - Juniper/contrail-vrouter-java-api
+          - Juniper/contrail-webui-third-party
+          - Juniper/contrail-web-controller
+          - Juniper/contrail-web-core
+          - Juniper/contrail-web-server-manager
+          - Juniper/contrail-web-storage
+          - Juniper/contrail-windows
+          - Juniper/contrail-windows-docker-driver
+          - Juniper/contrail-windows-test
+          - Juniper/contrail-windows-ci-infra
+          - Juniper/contrail-vcenter-fabric-manager
+          - Juniper/contrail-vcenter-manager
+          - Juniper/contrail-vcenter-plugin
+          - Juniper/contrail-vnc
+          - Juniper/horizon
+          - Juniper/nova
+          - Juniper/openshift-ansible
+          - Juniper/openstack-helm:
+              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+          - Juniper/openstack-helm-infra:
+              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+          - Juniper/puppet-contrail
+          - Juniper/vijava
+          - tungstenfabric/docs
+          - tungstenfabric/tungsten-test-runner
+          - tungstenfabric-infra/periodic-nightly
+#- tenant:
+#    name: tungstenfabric-preview
+#    max-job-timeout: -1
+#    source:
+#      github:
+#        config-projects:
+#          - tungstenfabric-infra-preview/project-config
+#        untrusted-projects:
+#          - tungstenfabric-infra-preview/zuul-jobs:
+#              shadow: tungstenfabric-infra-preview/project-config
+#          - tungstenfabric-infra-preview/docker-publisher
+#          - Juniper/zuul:
+#              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+#          - tungstenfabric-infra-preview/ci-utils
+#          - tungstenfabric-infra-preview/containerregistry
+#          - tungstenfabric-infra-preview/tungsten-zuul-jobs:
+#              shadow: tungstenfabric-infra-preview/project-config
+#          - tungstenfabric-preview/analytics
+#          - tungstenfabric-tools-preview/ansible
+#          - tungstenfabric-tools-preview/ansible-deployer
+#          - tungstenfabric-tools-preview/ansible-internal
+#          - tungstenfabric-preview/api-client
+#          - tungstenfabric-tools-preview/build
+#          - tungstenfabric-preview/common
+#          - tungstenfabric-preview/community-docs
+#          - tungstenfabric-tools-preview/container-builder
+#          - tungstenfabric-preview/controller
+#          - tungstenfabric-tools-preview/deployers-containers
+#          - tungstenfabric-tools-preview/dev-env
+#          - tungstenfabric-preview/docs
+#          - tungstenfabric-preview/dpdk
+#          - tungstenfabric-tools-preview/fabric-utils
+#          - tungstenfabric-preview/generateDS
+#          - tungstenfabric-preview/go-api
+#          - tungstenfabric-preview/openstack-heat
+#          - tungstenfabric-tools-preview/helm-deployer
+#          - tungstenfabric-infra-preview/system-config
+#          - tungstenfabric-infra-preview/docs
+#          - tungstenfabric-preview/java-api
+#          - tungstenfabric-tools-preview/kolla-ansible:
+#              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+#          - tungstenfabric-preview/neutron-plugin
+#          - tungstenfabric-preview/nova-vif-driver
+#          - tungstenfabric-tools-preview/packages
+#          - tungstenfabric-tools-preview/provisioning
+#          - tungstenfabric-preview/sandesh
+#          - tungstenfabric-preview/specs
+#          - tungstenfabric-preview/test
+#          - tungstenfabric-tools-preview/third-party
+#          - tungstenfabric-tools-preview/third-party-cache
+#          - tungstenfabric-tools-preview/third-party-packages
+#          - tungstenfabric-tools-preview/tripleo-heat-templates
+#          - tungstenfabric-tools-preview/tripleo-puppet
+#          - tungstenfabric-preview/vro-plugin
+#          - tungstenfabric-preview/vrouter
+#          - tungstenfabric-preview/vrouter-java-api
+#          - tungstenfabric-preview/webui-third-party
+#          - tungstenfabric-preview/web-controller
+#          - tungstenfabric-preview/web-core
+#          - tungstenfabric-preview/web-server-manager
+#          - tungstenfabric-preview/web-storage
+#          - tungstenfabric-preview/windows
+#          - tungstenfabric-preview/windows-docker-driver
+#          - tungstenfabric-preview/vcenter-manager
+#          - tungstenfabric-preview/vcenter-plugin
+#          - tungstenfabric-preview/vnc
+#          - tungstenfabric-preview/openstack-horizon
+#          - tungstenfabric-preview/openstack-nova
+#          - tungstenfabric-tools-preview/openshift-ansible
+#          - tungstenfabric-tools-preview/openstack-helm:
+#              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+#          - tungstenfabric-tools-preview/openstack-helm-infra:
+#              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+#          - tungstenfabric-preview/vijava
+#          - tungstenfabric/docs
+#          - tungstenfabric-preview/test-runner
+#          - tungstenfabric-preview/intent-service
+#          - tungstenfabric-preview/windows-test
+#          - tungstenfabric-preview/windows-ci-infra
+#          - tungstenfabric-preview/vcenter-fabric-manager
+#      gerrit:
+#        untrusted-projects:
+#          - tungstenfabric/contrail-ci-test
+#              # There is a problem with triggering changes from github, so we need just one repo from any Gerrit.
+#              # There is a problem with triggering changes from empty gerrit repo, and this one isn't empty.
+#              # It's only use is to actually trigger CI builds with dummy commits. It is otherwise not built in CI in any way.
