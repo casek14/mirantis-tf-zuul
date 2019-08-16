@@ -27,7 +27,7 @@ services:
       - "sshkey:/var/ssh:z"
       - "nodessh:/var/node:z"
       - "./playbooks/:/var/playbooks/:z"
-    command: "/usr/local/lib/zuul/ansible/2.5/bin/ansible-playbook /var/playbooks/setup_contrail.yaml"
+    command: "/usr/local/lib/zuul/ansible/2.5/bin/ansible-playbook /var/playbooks/setup-contrail.yaml"
   zk:
     image: zookeeper
   mysql:

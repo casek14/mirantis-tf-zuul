@@ -5,8 +5,4 @@
     name: create_project
   vars:
     project: "{{ item }}"
-  loop:
-    - Juniper/contrail-analytics
-    - Juniper/contrail-ansible-deployer
-    - Juniper/contrail-api-client
-    - Juniper/contrail-build
+  loop: "{{ tf_projects }}"
