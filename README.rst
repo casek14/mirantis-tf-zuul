@@ -1,3 +1,45 @@
+How to run
+----------
+
+Clone the repo::
+
+    # git clone  https://github.com/casek14/mirantis-tf-zuul.git
+
+
+Navigate to directory::
+
+    # cd mirantis-tf-zuul/doc/source/admin/examples
+
+Make sure that docker-compose is installed, and run::
+
+    # docker-compose up -d
+
+Now all needed containers should be started. Wait few minutes, so scripts will configure the env.
+If everything is up, you should be able to see Gerrit and Zuul webui on url::
+
+    Gerrit: http://localhost:8080/
+    Zuul: http://localhost:9000/t/opencontrail/status
+
+Upload TF-project configuration:
+-------------------------------
+
+Clone the configuration project for zuul from local gerrit::
+
+    # git clone http://localhost:8080/Juniper/contrail-project-config
+
+Then clone ready configuraton for example to tmp dir::
+
+    # git clone https://github.com/casek14/contrail-project-config.git /tmp/
+
+Then copy all files from the ready configuration repo except .git files to project cloned from local repository::
+
+    # copy /tmp/contrail-project-config/playbooks .
+    # copy /tmp/contrail-project-config/roles .
+    # copy /tmp/contrail-project-config/zuul.d .
+
+Now you can commit all the changes and push into local contrail-project-config. Then you have to navigate to Gerrit webUI and log in as admin. Gerrit is running in unprotected mode
+so it do not require password. Merge the change you uploaded. Then you can check the Zuul webUI, configuration should be reloaded automatically.
+
 Zuul
 ====
 
