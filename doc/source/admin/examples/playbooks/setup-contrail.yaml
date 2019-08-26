@@ -82,9 +82,6 @@
         name: create_project
       vars:
         project: test2
-    - name: Create TF projects
-      include_role:
-        name: create-tf-projects
 
     # The Zuul user is created last because it is an atomic operation
     # which signals that Gerrit is ready for use and it is safe for
@@ -109,3 +106,10 @@
           http_password: secret
           groups:
             - "Non-Interactive Users"
+
+    # At the end create all neded TF projects
+    # This role first creates all the projects
+    # Then fill the projects with code
+    - name: Create TF projects
+      include_role:
+        name: create-tf-projects
