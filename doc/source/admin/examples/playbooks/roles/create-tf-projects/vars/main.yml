@@ -3,294 +3,367 @@
 # %2F is substitution for / char
 tf_projects:
   - repo: Juniper%2Fcontrail-analytics
+    repo_prefix: Juniper
     name: contrail-analytics
     url: https://github.com/Mirantis/contrail-analytics
     branch: all
   - repo: Juniper%2Fcontrail-ansible-deployer
+    repo_prefix: Juniper
     name: contrail-ansible-deployer
     url: https://github.com/Juniper/contrail-ansible-deployer
     branch: all
   - repo: Juniper%2Fcontrail-api-client
+    repo_prefix: Juniper
     name: contrail-api-client
     url: https://github.com/Mirantis/contrail-api-client
     branch: all
   - repo: Juniper%2Fcontrail-build
+    repo_prefix: Juniper
     name: contrail-build
     url: https://github.com/Mirantis/contrail-build
     branch: all
   - repo: Juniper%2Fcontrail-common
+    repo_prefix: Juniper
     name: contrail-common
     url: https://github.com/Mirantis/contrail-common
     branch: all
   - repo: Juniper%2Fcontrail-controller
+    repo_prefix: Juniper
     name: contrail-controller
     url: https://github.com/Mirantis/contrail-controller
     branch: all
   - repo: Juniper%2Fcontrail-dpdk
+    repo_prefix: Juniper
     name: contrail-dpdk
     url: https://github.com/Mirantis/contrail-dpdk
-    branch: dpdk-branch
+    branch: dpdk
   - repo: Juniper%2Fcontrail-fabric-utils
+    repo_prefix: Juniper
     name: contrail-fabric-utils
     url: https://github.com/Juniper/contrail-fabric-utils
     branch: all
   - repo: Juniper%2Fcontrail-generateDS
+    repo_prefix: Juniper
     name: contrail-generateDS
     url: https://github.com/Mirantis/contrail-generateDS
     branch: master
   - repo: Juniper%2Fcontrail-java-api
+    repo_prefix: Juniper
     name: contrail-java-api
     url: https://github.com/Juniper/contrail-java-api
     branch: all
   - repo: Juniper%2Fcontrail-heat
+    repo_prefix: Juniper
     name: contrail-heat
     url: https://github.com/Mirantis/contrail-heat
     branch: all
   - repo: Juniper%2Fcontrail-neutron-plugin
+    repo_prefix: Juniper
     name: contrail-neutron-plugin
     url: https://github.com/Mirantis/contrail-neutron-plugin
     branch: all
   - repo: Juniper%2Fcontrail-nova-vif-driver
+    repo_prefix: Juniper
     name: contrail-nova-vif-driver
     url: https://github.com/Mirantis/contrail-nova-vif-driver
     branch: all
   - repo: Juniper%2Fcontrail-packages
+    repo_prefix: Juniper
     name: contrail-packages
     url: https://github.com/Mirantis/contrail-packages
     branch: all
   - repo: Juniper%2Fcontrail-provisioning
+    repo_prefix: Juniper
     name: contrail-provisioning
     url: https://github.com/Juniper/contrail-provisioning
     branch: all
   - repo: Juniper%2Fcontrail-sandesh
+    repo_prefix: Juniper
     name: contrail-sandesh
     url: https://github.com/Mirantis/contrail-sandesh
     branch: all
   - repo: Juniper%2Fcontrail-specs
+    repo_prefix: Juniper
     name: contrail-specs
     url: https://github.com/Juniper/contrail-specs
     branch: master
   - repo: Juniper%2Fcontrail-test
+    repo_prefix: Juniper
     name: contrail-test
     url: https://github.com/Juniper/contrail-test
     branch: all
   - repo: Juniper%2Fcontrail-third-party
+    repo_prefix: Juniper
     name: contrail-third-party
     url: https://github.com/Mirantis/contrail-third-party
     branch: all
   - repo: Juniper%2Fcontrail-tripleo-puppet
+    repo_prefix: Juniper
     name: contrail-tripleo-puppet
     url: https://github.com/Juniper/contrail-tripleo-puppet
     branch: master
   - repo: Juniper%2Fcontrail-vcenter-manager
+    repo_prefix: Juniper
     name: contrail-vcenter-manager
     url: https://github.com/Juniper/contrail-vcenter-manager
     branch: all
   - repo: Juniper%2Fcontrail-vcenter-plugin
+    repo_prefix: Juniper
     name: contrail-vcenter-plugin
     url: https://github.com/Juniper/contrail-vcenter-plugin
     branch: all
   - repo: Juniper%2Fcontrail-vnc
+    repo_prefix: Juniper
     name: contrail-vnc
     url: https://github.com/Juniper/contrail-vnc
     branch: all
   - repo: Juniper%2Fcontrail-vrouter
+    repo_prefix: Juniper
     name: contrail-vrouter
     url: https://github.com/Mirantis/contrail-vrouter
     branch: all
   - repo: Juniper%2Fcontrail-vrouter-java-api
+    repo_prefix: Juniper
     name: contrail-vrouter-java-api
     url: https://github.com/Juniper/contrail-vrouter-java-api
     branch: all
   - repo: Juniper%2Fcontrail-vro-plugin
+    repo_prefix: Juniper
     name: contrail-vro-plugin
     url: https://github.com/Juniper/contrail-vro-plugin
     branch: all
   - repo: Juniper%2Fcontrail-web-controller
+    repo_prefix: Juniper
     name: contrail-web-controller
     url: https://github.com/Mirantis/contrail-web-controller
     branch: all
   - repo: Juniper%2Fcontrail-web-core
+    repo_prefix: Juniper
     name: contrail-web-core
     url: https://github.com/Mirantis/contrail-web-core
     branch: all
   - repo: Juniper%2Fcontrail-web-server-manager
+    repo_prefix: Juniper
     name: contrail-web-server-manager
     url: https://github.com/Mirantis/contrail-web-server-manager
     branch: all
   - repo: Juniper%2Fcontrail-web-storage
+    repo_prefix: Juniper
     name: contrail-web-storage
     url: https://github.com/Mirantis/contrail-web-storage
     branch: all
   - repo: Juniper%2Fcontrail-webui-third-party
+    repo_prefix: Juniper
     name: contrail-webui-third-party
     url: https://github.com/Mirantis/contrail-webui-third-party
     branch: all
   - repo: Juniper%2Fvijava
+    repo_prefix: Juniper
     name: vijava
     url: https://github.com/Juniper/vijava
     branch: all
   - repo: Juniper%2Fcontrail-project-config
+    repo_prefix: Juniper
     name: contrail-project-config
     url: https://github.com/casek14/contrail-project-config
     branch: master
   - repo: Juniper%2Fcontrail
+    repo_prefix: Juniper
     name: contrail
     url: https://github.com/Juniper/contrail
     branch: all
   - repo: Juniper%2Fcontrail-zuul-jobs
+    repo_prefix: Juniper
     name: contrail-zuul-jobs
     url: https://github.com/Juniper/contrail-zuul-jobs
     branch: master
   - repo: Juniper%2Fcontrail-ansible
+    repo_prefix: Juniper
     name: contrail-ansible
     url: https://github.com/Juniper/contrail-ansible
     branch: master
   - repo: Juniper%2Fcontrail-ansible-internal
+    repo_prefix: Juniper
     name: contrail-ansible-internal
     url: https://github.com/Juniper/contrail-ansible-iternal
     branch: master
   - repo: Juniper%2Fcontrail-api-client
+    repo_prefix: Juniper
     name: contrail-api-client
     url: https://github.com/Mirantis/contrail-api-client
     branch: all
   - repo: Juniper%2Fcontrail-build/
+    repo_prefix: Juniper
     name: contrail-build/
     url: https://github.com/Mirantis/contrail-build
     branch: all
   - repo: Juniper%2Fcontrail-community-docs
+    repo_prefix: Juniper
     name: contrail-community-docs
     url: https://github.com/Juniper/contrail-community-logs
     branch: master
   - repo: Juniper%2Fcontrail-container-builder
+    repo_prefix: Juniper
     name: contrail-container-builder
     url: https://github.com/Juniper/contrail-container-builder
     branch: all
   - repo: Juniper%2Fcontrail-deployers-containers
+    repo_prefix: Juniper
     name: contrail-deployers-containers
     url: https://github.com/Juniper/contrail-deployers-containers
     branch: master
   - repo: Juniper%2Fcontrail-dev-env
+    repo_prefix: Juniper
     name: contrail-dev-env
     url: https://github.com/Juniper/contrail-dev-env
     branch: all
   - repo: Juniper%2Fcontrail-docker
+    repo_prefix: Juniper
     name: contrail-docker
     url: https://github.com/Juniper/contrail-docker
     branch: master
   - repo: Juniper%2Fcontrail-go-api
+    repo_prefix: Juniper
     name: contrail-go-api
     url: https://github.com/Juniper/contrail-go-pai
     branch: master
   - repo: Juniper%2Fcontrail-helm-deployer
+    repo_prefix: Juniper
     name: contrail-helm-deployer
     url: https://github.com/Juniper/contrail-helm-deployer
     branch: all
   - repo: Juniper%2Fcontrail-horizon
+    repo_prefix: Juniper
     name: contrail-horizon
     url: https://github.com/Juniper/contrail-horizon
     branch: master
   - repo: Juniper%2Fcontrail-infra
+    repo_prefix: Juniper
     name: contrail-infra
     url: https://github.com/Juniper/contrail-infra
     branch: master
   - repo: Juniper%2Fcontrail-infra-doc
+    repo_prefix: Juniper
     name: contrail-infra-doc
     url: https://github.com/Juniper/contrail-infra-doc
     branch: master
   - repo: Juniper%2Fcontrail-kolla-ansible
+    repo_prefix: Juniper
     name: contrail-kolla-ansible
     url: https://github.com/Juniper/contrail-kolla-ansible
     branch: master
   - repo: Juniper%2Fcontrail-packaging
+    repo_prefix: Juniper
     name: contrail-packaging
     url: https://github.com/Juniper/contrail-packaging
     branch: master
   - repo: Juniper%2Fcontrail-puppet
+    repo_prefix: Juniper
     name: contrail-puppet
     url: https://github.com/Juniper/contrail-puppet
     branch: master
   - repo: Juniper%2Fcontrail-server-manager
+    repo_prefix: Juniper
     name: contrail-server-manager
     url: https://github.com/Juniper/contrail-server-manager
     branch: master
   - repo: Juniper%2Fcontrail-test-ci
+    repo_prefix: Juniper
     name: contrail-test-ci
     url: https://github.com/Juniper/contrail-test-ci
     branch: master
   - repo: Juniper%2Fcontrail-third-party-cache
+    repo_prefix: Juniper
     name: contrail-third-party-cache
     url: https://github.com/Juniper/contrail-third-party-cache
     branch: master
   - repo: Juniper%2Fcontrail-third-party-packages
+    repo_prefix: Juniper
     name: contrail-third-party-packages
     url: https://github.com/Juniper/contrail-third-party-packages
     branch: master
   - repo: Juniper%2Fcontrail-tripleo-heat-templates
+    repo_prefix: Juniper
     name: contrail-tripleo-heat-templates
     url: https://github.com/Juniper/tripleo-heat-templates
     branch: master
   - repo: Juniper%2Fcontrail-windows
+    repo_prefix: Juniper
     name: contrail-windows
     url: https://github.com/Juniper/contrail-windows
     branch: master
   - repo: Juniper%2Fcontrail-windows-docker-driver
+    repo_prefix: Juniper
     name: contrail-windows-docker-driver
     url: https://github.com/Juniper/contrail-windows-docker-driver
     branch: master
   - repo: Juniper%2Fcontrail-windows-test
+    repo_prefix: Juniper
     name: contrail-windows-test
     url: https://github.com/Juniper/contrail-windows-test
     branch: master
   - repo: Juniper%2Fcontrail-windows-ci-infra
+    repo_prefix: Juniper
     name: contrail-windows-ci-infra
     url: https://github.com/Juniper/contrail-windows-ci-infra
     branch: master
   - repo: Juniper%2Fcontrail-vcenter-fabric-manager
+    repo_prefix: Juniper
     name: contrail-vcenter-fabric-manager
     url: https://github.com/Juniper/contrail-vcenter-fabric-manager
     branch: master
   - repo: Juniper%2Fcontrail-vcenter-manager
+    repo_prefix: Juniper
     name: contrail-vcenter-manager
     url: https://github.com/Juniper/contrail-vcenter-manager
     branch: all
   - repo: Juniper%2Fcontrail-vcenter-plugin
+    repo_prefix: Juniper
     name: contrail-vcenter-plugin
     url: https://github.com/Juniper/contrail-vcenter-plugin
     branch: all
   - repo: Juniper%2Fhorizon
+    repo_prefix: Juniper
     name: horizon
     url: https://github.com/Juniper/horizon
     branch: master
   - repo: Juniper%2Fnova
+    repo_prefix: Juniper
     name: nova
     url: https://github.com/Juniper/nova
     branch: master
   - repo: Juniper%2Fopenshift-ansible
+    repo_prefix: Juniper
     name: openshift-ansible
     url: https://github.com/Juniper/openshift-ansible
     branch: master
   - repo: Juniper%2Fopenstack-helm
+    repo_prefix: Juniper
     name: openstack-helm
     url: https://github.com/Juniper/openstack-helm
     branch: all
   - repo: Juniper%2Fopenstack-helm-infra
+    repo_prefix: Juniper
     name: openstack-helm-infra
     url: https://github.com/Juniper/openstack-helm-infra
     branch: all
   - repo: Juniper%2Fpuppet-contrail
+    repo_prefix: Juniper
     name: puppet-contrail
     url: https://github.com/Juniper/puppet-contrail
     branch: master
   - repo: tungstenfabric%2Fdocs
+    repo_prefix: tungstenfabric
     name: docs
     url: https://github.com/tungstenfabric/docs
     branch: master
   - repo: tungstenfabric%2Ftungsten-test-runner
+    repo_prefix: tungstenfabric
     name: tungsten-test-runner
     url: https://github.com/tungstenfabric/tungsten-test-runner
     branch: master
   - repo: tungstenfabric-infra%2Fperiodic-nightly
+    repo_prefix: tungstenfabric-infra
     name: periodic-nightly
     url: https://github.com/tungstenfabric/contrail-ci-test
     branch: master
