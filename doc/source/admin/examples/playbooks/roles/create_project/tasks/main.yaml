@@ -16,21 +16,21 @@
         user: admin
         password: secret
         status_code: 201
-    - name: Create initial commit in {{ project }}
-      shell:
-        executable: /bin/sh
-        chdir: "{{ project_tmp.stdout }}"
-        cmd: |
-          git init .
-          git config user.name "Admin"
-          git config user.email "admin@example.com"
-          cat >.gitreview <<EOF
-          [gerrit]
-          host=localhost
-          port=29418
-          project={{ project }}
-          EOF
-          git add .gitreview
-          git commit -m "Initial commit"
-          git remote add gerrit http://admin:secret@gerrit:8080/{{ project }}
-          git push -f --set-upstream gerrit +HEAD:master
+        #    - name: Create initial commit in {{ project }}
+        #      shell:
+        #        executable: /bin/sh
+        #        chdir: "{{ project_tmp.stdout }}"
+        #        cmd: |
+        #          git init .
+        #          git config user.name "Admin"
+        #          git config user.email "admin@example.com"
+        #          cat >.gitreview <<EOF
+        #          [gerrit]
+        #          host=localhost
+        #          port=29418
+        #          project={{ project }}
+        #          EOF
+        #          git add .gitreview
+        #          git commit -m "Initial commit"
+        #          git remote add gerrit http://admin:secret@gerrit:8080/{{ project }}
+        #          git push -f --set-upstream gerrit +HEAD:master
