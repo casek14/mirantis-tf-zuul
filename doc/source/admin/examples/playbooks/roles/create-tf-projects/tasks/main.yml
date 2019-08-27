@@ -1,8 +1,47 @@
 ---
 # tasks file for create-tf-projects
+- name: Create directory for tf projects
+  file:
+    path: /tmp/tf-projects
+    state: directory
+    mode: '0775'
+
 - name: Create TF repositories
   include_role:
     name: create_project
   vars:
-    project: "{{ item }}"
+    project: "{{ item.name }}"
+  loop: "{{ tf_projects }}"
+
+- name: clone all needed tf projects
+  include_role:
+    name: git-clone-branches
+  vars:
+    project_name: "{{ item.name }}"
+    project_prefix: "{{ item.repo_prefix }}"
+    project_url: "{{ item.url  }}"
+    branches: "{{ all-branch }}"
+  when: "{{ item.branch }}" == "all"
+  loop: "{{ tf_projects }}"
+
+- name: clone all needed tf projects
+  include_role:
+    name: git-clone-branches
+  vars:
+    project_name: "{{ item.name }}"
+    project_prefix: "{{ item.repo_prefix }}"
+    project_url: "{{ item.url  }}"
+    branches: "{{ master-branch }}"
+  when: "{{ item.branch }}" == "master"
+  loop: "{{ tf_projects }}"
+
+- name: clone all needed tf projects
+  include_role:
+    name: git-clone-branches
+  vars:
+    project_name: "{{ item.name }}"
+    project_prefix: "{{ item.repo_prefix }}"
+    project_url: "{{ item.url  }}"
+    branches: "{{ dpdk-branch }}"
+  when: "{{ item.branch }}" == "dpdk"
   loop: "{{ tf_projects }}"
