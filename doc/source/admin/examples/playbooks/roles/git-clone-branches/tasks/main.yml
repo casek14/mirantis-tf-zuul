@@ -1,0 +1,19 @@
+---
+# tasks file for git-clone-branches
+- name: Cloning {{ project_name }} into {{ dst_dir }}
+  git:
+    repo: "{{ project_url }}"
+    dest: "{{ dst_dir }}/{{ project_name }}-{{ item }}"
+    version: "{{ item }}"
+  loop: "{{ branches }}"
+ 
+- name: Pushing {{ project_name }}, branch {{ item }} into Gerrit
+  shell:
+    executable: /bin/sh
+    chdir: "{{ dst_dir }}/{{ project_name }}-{{ item }}"
+    cmd: |
+      git config user.name "Admin"
+      git config user.email "admin@example.com"
+      git remote add gerrit http://admin:secret@gerrit:8080/{{ project_prefix }}/{{ project_name }}
+      git push -f --set-upstream gerrit +HEAD:{{ item }}
+    loop: "{{ branches }}"
