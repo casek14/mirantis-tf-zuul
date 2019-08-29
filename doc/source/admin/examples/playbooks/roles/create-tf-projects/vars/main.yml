@@ -185,7 +185,7 @@ tf_projects:
   - repo: Juniper%2Fcontrail-ansible-internal
     repo_prefix: Juniper
     name: contrail-ansible-internal
-    url: https://github.com/Juniper/contrail-ansible-iternal
+    url: https://github.com/Juniper/contrail-ansible-internal
     branch: master
   - repo: Juniper%2Fcontrail-api-client
     repo_prefix: Juniper
@@ -200,7 +200,7 @@ tf_projects:
   - repo: Juniper%2Fcontrail-community-docs
     repo_prefix: Juniper
     name: contrail-community-docs
-    url: https://github.com/Juniper/contrail-community-logs
+    url: https://github.com/Juniper/contrail-community-docs
     branch: master
   - repo: Juniper%2Fcontrail-container-builder
     repo_prefix: Juniper
@@ -225,7 +225,7 @@ tf_projects:
   - repo: Juniper%2Fcontrail-go-api
     repo_prefix: Juniper
     name: contrail-go-api
-    url: https://github.com/Juniper/contrail-go-pai
+    url: https://github.com/Juniper/contrail-go-api
     branch: master
   - repo: Juniper%2Fcontrail-helm-deployer
     repo_prefix: Juniper
@@ -285,7 +285,7 @@ tf_projects:
   - repo: Juniper%2Fcontrail-tripleo-heat-templates
     repo_prefix: Juniper
     name: contrail-tripleo-heat-templates
-    url: https://github.com/Juniper/tripleo-heat-templates
+    url: https://github.com/Juniper/contrail-tripleo-heat-templates
     branch: master
   - repo: Juniper%2Fcontrail-windows
     repo_prefix: Juniper
