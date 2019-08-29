@@ -4,7 +4,7 @@ version: '2'
 
 services:
   gerrit:
-    image: gerritcodereview/gerrit
+          image: quay.io/casek14/gerrit:v1
     ports:
       - "8080:8080"
       - "29418:29418"
@@ -14,6 +14,7 @@ services:
         git config -f /var/gerrit/etc/gerrit.config gerrit.ui POLYGERRIT && \
         git config -f /var/gerrit/etc/gerrit.config sendemail.enable false && \
         git config -f /var/gerrit/etc/gerrit.config noteDb.changes.autoMigrate true && \
+        git config -f /var/gerrit/etc/gerrit.config receive.maxBatchCommits 50000 && \
         /var/gerrit/bin/gerrit.sh run'
   gerritconfig:
     image: zuul/zuul-executor
