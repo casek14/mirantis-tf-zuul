@@ -10,7 +10,7 @@
   include_role:
     name: create_project
   vars:
-    project: "{{ item.name }}"
+    project: "{{ item.repo }}"
   loop: "{{ tf_projects }}"
 
 - name: clone all needed tf projects
@@ -20,8 +20,11 @@
     project_name: "{{ item.name }}"
     project_prefix: "{{ item.repo_prefix }}"
     project_url: "{{ item.url  }}"
-    branches: "{{ all-branch }}"
-  when: "{{ item.branch }}" == "all"
+    branches:
+      - "R5.0"
+      - "R5.1"
+      - "master"
+  when: '"all" in item.branch'
   loop: "{{ tf_projects }}"
 
 - name: clone all needed tf projects
@@ -31,8 +34,9 @@
     project_name: "{{ item.name }}"
     project_prefix: "{{ item.repo_prefix }}"
     project_url: "{{ item.url  }}"
-    branches: "{{ master-branch }}"
-  when: "{{ item.branch }}" == "master"
+    branches:
+      - "master"
+  when: '"master" in item.branch'
   loop: "{{ tf_projects }}"
 
 - name: clone all needed tf projects
@@ -42,6 +46,12 @@
     project_name: "{{ item.name }}"
     project_prefix: "{{ item.repo_prefix }}"
     project_url: "{{ item.url  }}"
-    branches: "{{ dpdk-branch }}"
-  when: "{{ item.branch }}" == "dpdk"
+    branches:
+      - "contrail_dpdk_17_02"
+      - "contrail_dpdk_17_05"
+      - "contrail_dpdk_17_11"
+      - "contrail_dpdk_17_11_3"
+      - "contrail_dpdk_18_05_1"
+      - "master"
+  when: '"dpdk" in item.branch'
   loop: "{{ tf_projects }}"

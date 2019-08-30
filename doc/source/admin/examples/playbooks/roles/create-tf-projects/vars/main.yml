@@ -367,22 +367,3 @@ tf_projects:
     name: periodic-nightly
     url: https://github.com/tungstenfabric/contrail-ci-test
     branch: master
-
-# upload all branches
-all-branch:
-  - "R5.0"
-  - "R5.1"
-  - "master"
-
-# upload only master branch
-master-branch:
-  - "master"
-
-# upload dpdk branches
-dpdk-branch:
-  - "contrail_dpdk_17_02"
-  - "contrail_dpdk_17_05"
-  - "contrail_dpdk_17_11"
-  - "contrail_dpdk_17_11_3"
-  - "contrail_dpdk_18_05_1"
-  - "master"
