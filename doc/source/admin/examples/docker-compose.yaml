@@ -4,7 +4,7 @@ version: '2'
 
 services:
   gerrit:
-          image: quay.io/casek14/gerrit:v1
+    image: quay.io/casek14/gerrit:v1
     ports:
       - "8080:8080"
       - "29418:29418"
