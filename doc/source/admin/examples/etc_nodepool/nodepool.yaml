@@ -3,6 +3,10 @@ zookeeper-servers:
 
 labels:
   - name: ubuntu-bionic
+  - name: ubuntu-trusty-builder 
+  - name: ubuntu-xenial-builder
+  - name: ubuntu-xenial-small
+  - name: xenial-small-c
 
 providers:
   - name: static-vms
@@ -10,8 +14,12 @@ providers:
     pools:
       - name: main
         nodes:
-          - name: node
-            labels: ubuntu-bionic
-            host-key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFjDZ9C89nUVGQ1qZzG/X0onkmcju4kWJ2uTLBdIXsy1"
+          - name: 192.168.14.18
+            labels: 
+              - ubuntu-trusty-builder
+              - ubuntu-xenial-builder
+              - ubuntu-xenial-small
+              - xenial-small-c
+            host-key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICg0BaqofIRDi7ssCWeyJWVi84zrmHSRX8/5LvL2jpVh"
             python-path: /usr/bin/python3
             username: root
