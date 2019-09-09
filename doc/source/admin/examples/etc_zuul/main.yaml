@@ -85,6 +85,7 @@
               exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
           - Juniper/puppet-contrail
           - Juniper/vijava
+          - Juniper/contrail-docs
           - tungstenfabric/docs
           - tungstenfabric/tungsten-test-runner
           - tungstenfabric-infra/periodic-nightly
