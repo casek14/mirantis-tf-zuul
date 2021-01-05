@@ -33,7 +33,7 @@
     "eslint-plugin-jest": "^21.21.0",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^3.1.0",
-    "yarn": "^1.16.0"
+    "yarn": "^1.22.0"
   },
   "scripts": {
     "start:openstack": "REACT_APP_ZUUL_API='https://zuul.openstack.org/api/' react-scripts start",
